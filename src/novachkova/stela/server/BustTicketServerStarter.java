@@ -6,7 +6,7 @@ import novachkova.stela.exception.MissingArgumentException;
 
 public class BustTicketServerStarter {
 	
-	private static int PORT;
+	private static int PORT = BusTicketServer.SERVER_PORT;
 	
 	private static String inputFile = null;
 	private static String outputFile = null;
@@ -41,10 +41,8 @@ public class BustTicketServerStarter {
 				try{
 					PORT = Integer.parseInt(args[++i]);
 				} catch (ArrayIndexOutOfBoundsException e){
-					PORT = BusTicketServer.SERVER_PORT;
 					throw new MissingArgumentException("<portnumber>", "-p");
 				} catch (NumberFormatException e) {
-					PORT = BusTicketServer.SERVER_PORT;
 					System.err.println("Usage: -p <portnumber>");
 				}
 				break;

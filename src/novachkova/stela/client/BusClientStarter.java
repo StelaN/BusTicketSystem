@@ -14,7 +14,7 @@ public class BusClientStarter {
 
 	private static InetAddress HOSTNAME;
 	private static int PORT = BusTicketServer.SERVER_PORT;
-	private static boolean runSimulation = true;
+	private static boolean runSimulation = false;
 	private static String destination = "nowhere";
 	private static int ticket = 0;
 	private static Method buyMethod = Method.ONLINE;
